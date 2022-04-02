@@ -1,0 +1,35 @@
+<Gerenciador>:#:kivy
+    Menu:
+        name:'menu'
+    Teste:
+        name:'teste'
+
+<Menu>:
+    BoxLayout:
+        orientation:'vertical'
+        Label:
+            text:'Teste de Velocidade de Digitação'
+        Button:
+            text:'Realizar o Teste'
+            on_press: app.root.current = 'teste'
+        Button:
+            text:'Sair'
+            on_press: app.Stop()
+        Widget:
+
+<Teste>:
+    BoxLayout:
+        orientation:'vertical'
+        BoxLayout:
+            orientation:'horizontal'
+            size_hint_y:0.2
+            Label:
+                id:timer
+                text:'60'
+        BoxLayout:
+            orientation:'vertical'
+            Label:
+                id:texto
+            Input:
+                id:usertexto
+                on_text: root.Type()
