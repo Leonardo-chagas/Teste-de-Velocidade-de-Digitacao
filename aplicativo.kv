@@ -30,6 +30,11 @@
             orientation:'vertical'
             Label:
                 id:texto
+                text: root.texto
+                markup: True
+                text_size: self.width, None
+                size_hint: 1, None
+                height: self.texture_size[1]
             Input:
                 id:usertexto
                 on_text: root.Type()
